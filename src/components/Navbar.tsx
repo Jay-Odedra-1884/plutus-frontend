@@ -4,8 +4,8 @@ import Link from "next/link"
 
 export default function navbar({ toggleDarkMode }: { toggleDarkMode: () => void }) {
     return (
-        <div className="flex justify-between items-center p-5 bg-white drop-shadow-lg text-black dark:bg-gradient-to-r from-black to-gray-900 dark:text-white">
-            <div className="bg-clip-text bg-gradient-to-r from-green-400 to-blue-500  p-2">
+        <div className="flex justify-between items-center p-5 bg-theme_black-light text-black dark:bg-theme_black-dark dark:text-white">
+            <div className="bg-clip-text bg-theme_red-light dark:bg-theme_red-dark  p-2">
                 {/* <img src="logo" alt="logo" /> */}
                 <p className="text-3xl text-transparent font-bold">PLUTUS</p>
             </div>

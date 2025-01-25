@@ -13,6 +13,14 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        theme_red: {
+          light: "#DA0046",
+          dark: "#DA0046",
+        },
+        theme_black: {
+          light: "#E7E7E7",
+          dark: "#1F1F1F",
+        }
       },
       keyframes: {
         jump: {

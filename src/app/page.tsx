@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="w-full h-screen bg-white dark:bg-gradient-to-r from-black to-gray-900 overflow-x-hidden">
+      <div className="w-full h-screen bg-white dark:bg-theme_black-dark overflow-x-hidden">
         <div className="w-full h-screen grid grid-cols-[750px_600px] gap-4 p-4 text-center items-center">
           <div className="">
             <p className="text-6xl mb-4 dark:text-white">Hey!</p>
@@ -42,7 +42,7 @@ export default function Home() {
               <p className="text-transparent text-6xl font-bold mb-10">let's connect your wallet</p>
             </div>
             <Link href={"http://plutus.priyanshpatel.site"}>
-              <button className="text-xl bg-gradient-to-l from-purple-600 to-pink-600 rounded-lg px-4 py-2">Connect your wallet</button>
+              <button className="text-xl bg-theme_red-light dark:bg-theme_red-dark rounded-lg px-4 py-2">Connect your wallet</button>
             </Link>
           </div>
           <div className="w-full flex justify-center items-center transition-all duration-500 ease-in-out transform relative hover:scale-110 ml-28">
@@ -52,9 +52,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='w-full h-screen bg-white flex flex-col justify-center text-center gap-10 dark:bg-gradient-to-r from-black to-gray-900 overflow-x-hidden'>
-        <div className='text-3xl'>
-          <p className='font-bold dark:text-white'>Meet Our Team</p>
+      <div className='w-full h-screen bg-white flex flex-col justify-center text-center gap-10 dark:bg-theme_black-dark overflow-x-hidden'>
+        <div className='bg-clip-text bg-theme_red-light text-3xl'>
+          <p className='font-bold text-transparent'>Meet Our Team</p>
         </div>
         <div className='w-full grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 '>
         {data.map((item, index) => (
