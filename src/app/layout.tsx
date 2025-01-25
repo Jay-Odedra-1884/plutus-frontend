@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import useDarkMode from "@/hooks/useDarkMode";
+import { APIDataProvider } from "@/hooks/UseApi";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({
   const {isDarkMode, toggleDarkMode} = useDarkMode();
   
   return (
+    <APIDataProvider>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -39,5 +41,6 @@ export default function RootLayout({
         </footer>
       </body>
     </html>
+    </APIDataProvider>
   );
 }
