@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CardH({ coin }: any) {
     return (
-        <div>
+        <div className="text-black dark:text-white">
             <Link href={"/"}>
             <div className="flex items-center gap-2 justify-between bg-theme_gray-light dark:bg-theme_gray-dark p-4 rounded-lg">
             <div className="flex gap-2 items-center">

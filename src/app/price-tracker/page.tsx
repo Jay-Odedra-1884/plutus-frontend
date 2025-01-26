@@ -15,18 +15,20 @@ export default function PriceTrackerPage() {
   const { data } = context;
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md">
-      <div>
-        <h1 className="text-3xl font-bold text-center mb-8">
+    <div className="mx-auto rounded-2xl shadow-md">
+      <div className="bg-theme_black-light dark:bg-theme_black-dark rounded-t-2xl h-16 w-96 p-3">
+        <h1 className="text-3xl text-black dark:text-white font-bold text-center mb-8">
           Cryptocurrency Prices
         </h1>
       </div>
-      <div>
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="bg-theme_black-light dark:bg-theme_black-dark p-5 rounded-b-2xl rounded-r-2xl ">
+      <div className="h-screen overflow-y-auto">
+        <div className="flex flex-col gap-3">
           {data.map((coin) => (
-            <CardH coin={coin} />
+            <CardH key={coin.id} coin={coin} />
           ))}
         </div>
+      </div>
       </div>
     </div>
   );

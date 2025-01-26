@@ -34,7 +34,7 @@ interface APIDataProviderProps {
 export const APIDataProvider = ({ children }: APIDataProviderProps) => {
   const [data, setData] = useState<Coin[]>([]);
 
-  const API = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,solana`;
+  const API = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
 
   const fetchData = useCallback(() => {
     fetch(API)
