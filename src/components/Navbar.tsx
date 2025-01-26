@@ -16,7 +16,7 @@ export default function navbar({ toggleDarkMode }: { toggleDarkMode: () => void 
                 <ul className="flex gap-10">
                     <li><Link href={"/prediction"}>AI prediction</Link></li>
                     <li><Link href={"/price-tracker"}>
-                    <div className="bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                    <div className="bg-clip-text bg-theme_red-dark">
                         <p className="text-transparent font-bold">Crypto Price Tracker</p>
                     </div>
                     </Link></li>
