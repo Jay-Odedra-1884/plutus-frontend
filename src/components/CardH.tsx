@@ -26,8 +26,6 @@ export default function CardH({ coin }: any) {
             <p className="text-lg mb-4">
                 <strong>24H Low:</strong> ${coin.low_24h}
             </p>
-            {/* Render the Graph for each coin */}
-            {/* <Graph coinId={coin.id} /> */}
         </div>
             </Link>
         </div>

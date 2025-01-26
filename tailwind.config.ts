@@ -20,6 +20,10 @@ export default {
         theme_black: {
           light: "#E7E7E7",
           dark: "#1F1F1F",
+        },
+        theme_gray: {
+          light: "#EBEBEB",
+          dark: "#232323",
         }
       },
       keyframes: {
