@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -28,6 +27,7 @@ export default function RootLayout({
   const pathName = usePathname()
   const showNavbar = pathName !== "/price-tracker"
   const {isDarkMode, toggleDarkMode} = useDarkMode();
+  console.log(`Dark mode: ${isDarkMode}`);
   
   return (
     <APIDataProvider>

@@ -39,7 +39,7 @@ export default function Home() {
           <div className="">
             <p className="text-6xl mb-4 dark:text-white">Hey!</p>
             <div className="bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 mb-4">
-              <p className="text-transparent text-6xl font-bold mb-10">let's connect your wallet</p>
+              <p className="text-transparent text-6xl font-bold mb-10">let&apos;s connect your wallet</p>
             </div>
             <Link href={"http://plutus.priyanshpatel.site"}>
               <button className="text-xl bg-theme_red-light dark:bg-theme_red-dark rounded-lg px-4 py-2">Connect your wallet</button>
