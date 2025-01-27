@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 
-export default function navbar({ toggleDarkMode, isDarkMode }: { toggleDarkMode: () => void,  isDarkMode:boolean }) {
+export default function navbar({ toggleDarkMode, isDarkMode }: { toggleDarkMode: () => void,  isDarkMode?:boolean }) {
     return (
         <div className="flex justify-between items-center p-5 bg-theme_black-light text-black dark:bg-theme_black-dark dark:text-white">
             <div className="bg-clip-text bg-theme_red-light dark:bg-theme_red-dark  p-2">

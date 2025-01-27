@@ -28,6 +28,7 @@ interface GraphProps {
 }
 
 export const Graph = ({ coinId }: GraphProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [chartData, setChartData] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -45,8 +46,9 @@ export const Graph = ({ coinId }: GraphProps) => {
           time: new Date(price[0]).toLocaleTimeString("en-US"),
           value: price[1],
         }));
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const labels = prices.map((entry: any) => entry.time);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const values = prices.map((entry: any) => entry.value);
 
         setChartData({
@@ -64,6 +66,7 @@ export const Graph = ({ coinId }: GraphProps) => {
             },
           ],
         });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (error: any) {
         setError(error.message);
         console.error(

@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 
-export default function Sidebar({togglemode, isDarkMode}: {togglemode: () => void, isDarkMode:boolean}) {
+export default function Sidebar({togglemode, isDarkMode}: {togglemode: () => void, isDarkMode?:boolean}) {
     return (
         <div className="bg-theme_black-light dark:bg-theme_black-dark text-black dark:text-white h-screen rounded-2xl p-4 text-center">
             <div className="bg-clip-text bg-theme_red-light dark:bg-theme_red-dark">
