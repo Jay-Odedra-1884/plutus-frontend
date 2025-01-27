@@ -3,7 +3,7 @@
 import Sidebar from "@/components/Sidebar";
 import useDarkMode from "@/hooks/useDarkMode";
 
-export default function priceTrackerLayout({children}: Readonly<{
+export default function PriceTrackerLayout({children}: Readonly<{
     children: React.ReactNode;
   }>) {
 
@@ -12,7 +12,7 @@ export default function priceTrackerLayout({children}: Readonly<{
     return (
         <div className="grid grid-cols-[230px_auto] gap-2 bg-white dark:bg-black p-2">
             <div>
-                <Sidebar togglemode={toggleDarkMode}/>
+                <Sidebar isDarkMode={isDarkMode} togglemode={toggleDarkMode}/>
             </div>
             <div>
             {children}

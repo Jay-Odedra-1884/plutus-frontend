@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header>
-          {showNavbar && <Navbar toggleDarkMode={toggleDarkMode} />}
+          {showNavbar && <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />}
         </header>
         <main>{children}</main>
         <footer>

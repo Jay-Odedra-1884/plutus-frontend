@@ -1,4 +1,4 @@
-"use client"; // This tells Next.js that this component should run on the client-side
+"use client"; 
 
 import { useEffect, useState } from "react";
 

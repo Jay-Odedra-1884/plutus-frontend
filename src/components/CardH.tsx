@@ -1,7 +1,21 @@
 import Link from "next/link";
 
 
-export default function CardH({ coin }:any) {
+interface Coin {
+    id: string;
+    symbol: string;
+    name: string;
+    image: string;
+    current_price: number;
+    high_24h: number;
+    low_24h: number;
+  }
+
+interface CardHProps {
+    coin: Coin;
+}
+
+export default function CardH({ coin }: CardHProps) {
     return (
         <div className="text-black dark:text-white">
             <Link href={"/"}>
