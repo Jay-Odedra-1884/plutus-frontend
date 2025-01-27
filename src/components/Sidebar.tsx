@@ -21,7 +21,7 @@ export default function Sidebar({togglemode, isDarkMode}: {togglemode: () => voi
                 </ul>
             </div>
             <div className="m-5 cursor-pointer" onClick={togglemode}>
-                Darkmode
+                {isDarkMode? "Lightmode" : "Darkmode"}
             </div>
         </div>
     )
