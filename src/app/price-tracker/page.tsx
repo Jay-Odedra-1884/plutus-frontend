@@ -2,7 +2,6 @@
 
 import { APIDataContext } from "@/hooks/UseApi";
 import { useContext } from "react";
-import { Graph } from "@/components/Graph";
 import CardH from "@/components/CardH";
 
 export default function PriceTrackerPage() {

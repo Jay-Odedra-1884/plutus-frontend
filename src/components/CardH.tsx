@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-export default function CardH({ coin }: any) {
+
+export default function CardH({ coin }:any) {
     return (
         <div className="text-black dark:text-white">
             <Link href={"/"}>
