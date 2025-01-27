@@ -27,7 +27,6 @@ export default function RootLayout({
   const pathName = usePathname()
   const showNavbar = pathName !== "/price-tracker"
   const {isDarkMode, toggleDarkMode} = useDarkMode();
-  console.log(`Dark mode: ${isDarkMode}`);
   
   return (
     <APIDataProvider>

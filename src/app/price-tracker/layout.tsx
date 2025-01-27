@@ -10,7 +10,7 @@ export default function PriceTrackerLayout({children}: Readonly<{
     const {isDarkMode, toggleDarkMode} = useDarkMode();
 
     return (
-        <div className="grid grid-cols-[230px_auto] gap-2 bg-white dark:bg-black p-2">
+        <div className="grid md:grid-cols-[230px_auto] grid-cols-1  md:gap-2 bg-white dark:bg-black md:p-2 p-0">
             <div>
                 <Sidebar isDarkMode={isDarkMode} togglemode={toggleDarkMode}/>
             </div>

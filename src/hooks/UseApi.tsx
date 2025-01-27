@@ -1,5 +1,7 @@
 "use client";
 
+import { Colors } from "chart.js";
+import { Console } from "console";
 import {
   createContext,
   ReactNode,
@@ -52,8 +54,10 @@ export const APIDataProvider = ({ children }: APIDataProviderProps) => {
     fetchData();
 
     const interval = setInterval(() => {
-      fetchData();
-    }, 60000); // Update data every 60 seconds
+      const data = fetchData();
+      console.log(data)
+    }, 6000); // Update data every 60 seconds
+
 
     return () => clearInterval(interval);
   }, [fetchData]);
