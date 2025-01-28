@@ -1,7 +1,5 @@
 "use client";
 
-import { Colors } from "chart.js";
-import { Console } from "console";
 import {
   createContext,
   ReactNode,
