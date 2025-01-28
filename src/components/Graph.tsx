@@ -90,7 +90,7 @@ export const Graph = ({ coinId }: GraphProps) => {
   }
 
   return (
-    <div className="w-full h-80 bg-white p-4 rounded-lg shadow-md mt-4">
+    <div className="w-full h-80 bg-theme_gray-light dark:bg-theme_gray-dark rounded-lg shadow-md mt-2 ">
       <Line
         options={{
           responsive: true,
@@ -121,7 +121,7 @@ export const Graph = ({ coinId }: GraphProps) => {
                 size: 16,
                 family: "Arial, sans-serif",
               },
-              color: "#333",
+              color: "green",
             },
           },
           scales: {
@@ -133,7 +133,7 @@ export const Graph = ({ coinId }: GraphProps) => {
                   size: 14,
                   family: "Arial, sans-serif",
                 },
-                color: "#333",
+                color: "#DA0046",
               },
               grid: {
                 display: false, // Hide the x-axis grid lines
@@ -147,13 +147,13 @@ export const Graph = ({ coinId }: GraphProps) => {
                   size: 14,
                   family: "Arial, sans-serif",
                 },
-                color: "#333",
+                color: "#DA0046",
               },
               ticks: {
                 maxTicksLimit: 6, // Limit the number of ticks
               },
               grid: {
-                color: "#ddd", // Subtle grid lines for y-axis
+                color: "rgba(53, 162, 235, 0.1)", // Subtle grid lines for y-axis
               },
               beginAtZero: false, // The correct place to apply this option in Chart.js v3+
             },

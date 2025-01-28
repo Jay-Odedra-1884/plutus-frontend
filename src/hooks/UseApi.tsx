@@ -11,13 +11,32 @@ import {
 } from "react";
 
 interface Coin {
-  id: string;
-  symbol: string;
-  name: string;
-  image: string;
+  ath: number;
+  ath_change_percentage: number;
+  ath_date: string; 
+  atl: number;
+  atl_change_percentage: number;
+  atl_date: string; 
+  circulating_supply: number;
   current_price: number;
+  fully_diluted_valuation: number;
   high_24h: number;
+  id: string;
+  image: string; // URL of image
+  last_updated: string; 
   low_24h: number;
+  market_cap: number;
+  market_cap_change_24h: number;
+  market_cap_change_percentage_24h: number;
+  market_cap_rank: number;
+  max_supply: number | null; 
+  name: string;
+  price_change_24h: number;
+  price_change_percentage_24h: number;
+  roi: null | { times: number; currency: string; percentage: number }; 
+  symbol: string;
+  total_supply: number;
+  total_volume: number;
 }
 
 interface APIDataContextType {
@@ -46,7 +65,7 @@ export const APIDataProvider = ({ children }: APIDataProviderProps) => {
         }
         return response.json();
       })
-      .then((data: Coin[]) => setData(data))
+      .then((data: Coin[]) => { setData(data); console.log("Updated API Data:", data); })
       .catch((error) => console.error("Error fetching data:", error));
   }, [API]);
 
@@ -54,9 +73,8 @@ export const APIDataProvider = ({ children }: APIDataProviderProps) => {
     fetchData();
 
     const interval = setInterval(() => {
-      const data = fetchData();
-      console.log(data)
-    }, 6000); // Update data every 60 seconds
+      fetchData();
+    }, 60000); // Update data every 60 seconds
 
 
     return () => clearInterval(interval);

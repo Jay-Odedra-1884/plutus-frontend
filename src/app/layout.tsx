@@ -2,9 +2,7 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import useDarkMode from "@/hooks/useDarkMode";
 import { APIDataProvider } from "@/hooks/UseApi";
 import { usePathname } from "next/navigation";
 
@@ -25,8 +23,6 @@ export default function RootLayout({
 }>) {
 
   const pathName = usePathname()
-  const showNavbar = pathName !== "/price-tracker"
-  const {isDarkMode, toggleDarkMode} = useDarkMode();
   
   return (
     <APIDataProvider>
@@ -34,9 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header>
-        {showNavbar && <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />}
-      
+        <header>      
         </header>
         <main>{children}</main>
         <footer>

@@ -1,5 +1,10 @@
+"use client"
+
 import Link from 'next/link';
 import Card from '@/components/Card';
+import useDarkMode from "@/hooks/useDarkMode";
+import Navbar from "@/components/Navbar";
+
 
 export default function Home() {
 
@@ -32,8 +37,12 @@ export default function Home() {
     }
   ]
 
+  const {isDarkMode, toggleDarkMode} = useDarkMode();
+
+
   return (
     <div>
+<Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <div className="w-full h-screen bg-white dark:bg-theme_black-dark overflow-x-hidden">
         <div className="w-full h-screen grid grid-cols-[750px_600px] gap-4 p-4 text-center items-center">
           <div className="">
